@@ -1,0 +1,20 @@
+{
+    "scan_soil" : "Scan Soil",
+    "hey_there" : "Hey there",
+    "weather" : "Weather",
+    "soil_test" : "Soil test",
+    "nitrogen" : "Nitrogen",
+    "phosphorus" : "Phosphorus",
+    "potassium" : "Potassium",
+    "temperature" : "Temperature",
+    "moisture" : "Moisture",
+    "ph" : "pH",
+    "ec" : "EC",
+    "sa" : "Scan Again",
+    "sr" : "Get Recommendations",
+    "loading" : "Loading...",
+    "reser" : "Regional Services",
+    "krishibhavan" : "Krishibhavan",
+    "weather" : "Weather",
+    "market" : "Market Today"
+}

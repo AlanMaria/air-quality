@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "255500404036",
+    "project_id": "agri-hack-23",
+    "storage_bucket": "agri-hack-23.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:255500404036:android:5d6912209fb1a1c80d8311",
+        "android_client_info": {
+          "package_name": "com.example.agri_hack"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "255500404036-hbckb35n35tcdc9urfqen4f127u272bk.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.agri_hack",
+            "certificate_hash": "e200dd2f088fe2591ac96f82c158f0bd528efbc3"
+          }
+        },
+        {
+          "client_id": "255500404036-7ni1l952rlpl3uffbev1230fgh4sqsci.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAzUpf2u6YuUEWYDvRm8NrsNR4LxN0KJGQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "255500404036-7ni1l952rlpl3uffbev1230fgh4sqsci.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

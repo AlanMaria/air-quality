@@ -1,0 +1,23 @@
+DO:
+// do if mounted before every setstate
+// location based krishibhavan
+// TODO add malayalam as a language option
+// the market price thingy requires some serious server side scripting and pdf handling
+// pretty sure I cant do that
+// unless...
+// I automate it using bash.
+// move this to late night
+// - ML MODEL
+
+DOING:
+// do a weather scan
+
+
+
+DONE:
+// give recommendations
+// a recommendation system is required
+// we need a login to do the krishibhavan thingy.
+// user inputs the location/krishibhavan and firebase does the rest_services
+
+
