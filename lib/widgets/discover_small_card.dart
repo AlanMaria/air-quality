@@ -81,7 +81,7 @@ class DiscoverSmallCard extends StatelessWidget {
               height: 125.w,
               width: 150.w,
               child: Padding(
-                padding: EdgeInsets.only(left: 20.w, top: 20.w, bottom: 20.w),
+                padding: EdgeInsets.only(left: 15.w, top: 20.w, bottom: 20.w),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -89,7 +89,7 @@ class DiscoverSmallCard extends StatelessWidget {
                     Text(
                       title!,
                       style: TextStyle(
-                          fontSize: 16.w,
+                          fontSize: 20.w,
                           fontWeight: FontWeight.bold,
                           color: Colors.white),
                     ),

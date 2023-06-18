@@ -1,5 +1,5 @@
-import 'package:agri_hack/screens/home_screen.dart';
 import 'package:agri_hack/screens/login_screen.dart';
+import 'package:agri_hack/screens/scan_screen.dart';
 import 'package:agri_hack/services/auth_services.dart';
 import 'package:agri_hack/services/firestore_services.dart';
 import 'package:agri_hack/services/showSnackbar.dart';
@@ -20,10 +20,10 @@ class ScreenSignUp extends StatefulWidget {
 }
 
 class _ScreenSignUpState extends State<ScreenSignUp> {
-  TextEditingController _nameEditingController = TextEditingController();
-  TextEditingController _emailEditingController = TextEditingController();
-  TextEditingController _passwordEditingController = TextEditingController();
-  TextEditingController _krishibhavanController = TextEditingController();
+  final TextEditingController _nameEditingController = TextEditingController();
+  final TextEditingController _emailEditingController = TextEditingController();
+  final TextEditingController _passwordEditingController =
+      TextEditingController();
 
   bool _isLoading = false;
 
@@ -54,7 +54,6 @@ class _ScreenSignUpState extends State<ScreenSignUp> {
       _nameEditingController.text.trim(),
       email,
       _passwordEditingController.text.trim(),
-      _krishibhavanController.text.trim(),
     );
 
     setState(() {
@@ -63,7 +62,7 @@ class _ScreenSignUpState extends State<ScreenSignUp> {
 
     if (res == 'success') {
       Navigator.pushReplacement(
-          context, MaterialPageRoute(builder: (context) => const ScreenHome()));
+          context, MaterialPageRoute(builder: (context) => const ScreenScan()));
     } else {
       showSnackbar(context, res);
     }
@@ -122,11 +121,6 @@ class _ScreenSignUpState extends State<ScreenSignUp> {
                 SizedBox(
                   height: 10.w,
                 ),
-                TextFormInput(
-                    textEditingController: _krishibhavanController,
-                    hintText: "Krishibhavan",
-                    style: const TextStyle(color: Colors.white),
-                    textInputType: TextInputType.text),
                 ElevatedButton(
                     onPressed: () {
                       signUp();

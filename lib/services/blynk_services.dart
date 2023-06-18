@@ -20,6 +20,7 @@ class BlynkServices {
       final data = response.data["feeds"];
       _measures.temperature = double.parse(data[0]["field1"]);
       _measures.CO = double.parse(data[0]["field2"]);
+      _measures.smoke = double.parse(data[0]["field3"]);
 
       status = StatusCode.SUCCESS;
       print("SUCCESS");
@@ -28,26 +29,6 @@ class BlynkServices {
       print("FAILED: $e");
     }
     return ServerReturns(status: status, measures: _measures);
-  }
-
-  static Future<List> getSingleValue(int pin) async {
-    print("Inside REST Service");
-    StatusCode status = StatusCode.EXECUTION;
-    double value = 0.0;
-    try {
-      final response = await Dio().get("$API_URL$API_TOKEN&v$pin");
-      print("DATA : ${response.data}");
-      value = response.data.toDouble();
-      // TODO name this according to pin, or do a map in constants
-      // TODO i have doubts with NPK, so I'm going to give garbage
-
-      status = StatusCode.SUCCESS;
-      print("SUCCESS");
-    } catch (e) {
-      status = StatusCode.FAILURE;
-      print("FAILED: $e");
-    }
-    return [status, value];
   }
 }
 

@@ -1,4 +1,4 @@
-import 'package:agri_hack/screens/home_screen.dart';
+import 'package:agri_hack/screens/scan_screen.dart';
 import 'package:agri_hack/screens/signup_screen.dart';
 import 'package:agri_hack/services/auth_services.dart';
 import 'package:agri_hack/services/firestore_services.dart';
@@ -50,7 +50,7 @@ class ScreenLoginState extends State<ScreenLogin> {
 
     if (res == "success") {
       Navigator.of(context).pushReplacement(
-          MaterialPageRoute(builder: ((context) => ScreenHome())));
+          MaterialPageRoute(builder: ((context) => ScreenScan())));
     } else {
       showSnackbar(context, res);
     }
@@ -78,7 +78,7 @@ class ScreenLoginState extends State<ScreenLogin> {
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text("Dhrishti 🧑‍🌾",
+                Text("Vaayu 🍃",
                     style: TextStyle(
                         color: Colors.white,
                         fontSize: 34.w,

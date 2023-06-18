@@ -1,7 +1,7 @@
 import 'package:agri_hack/l10n/supported_locale.dart';
 import 'package:agri_hack/providers/locale_provider.dart';
-import 'package:agri_hack/screens/home_screen.dart';
 import 'package:agri_hack/screens/login_screen.dart';
+import 'package:agri_hack/screens/scan_screen.dart';
 import 'package:firebase_app_check/firebase_app_check.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
@@ -60,7 +60,7 @@ class MyApp extends StatelessWidget {
             builder: (context, snapshot) {
               if (snapshot.connectionState == ConnectionState.active) {
                 if (snapshot.hasData) {
-                  return ScreenHome();
+                  return ScreenScan();
                 } else if (snapshot.hasError) {
                   return Center(
                     child: Text("${snapshot.error}"),

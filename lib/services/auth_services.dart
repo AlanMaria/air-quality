@@ -5,15 +5,13 @@ class AuthServices {
   final _auth = FirebaseAuth.instance;
   final _firestore = FirestoreServices();
 
-  Future<String> signUpUser(
-      String name, String email, String password, String krishibhavan) async {
+  Future<String> signUpUser(String name, String email, String password) async {
     String res = "Some error occured";
 
     try {
       UserCredential cred = await _auth.createUserWithEmailAndPassword(
           email: email, password: password);
-      await _firestore.signupUserToDB(
-          _auth.currentUser!.uid, name, email, krishibhavan);
+      await _firestore.signupUserToDB(_auth.currentUser!.uid, name, email);
 
       res = "success";
     } on FirebaseAuthException catch (fberror) {

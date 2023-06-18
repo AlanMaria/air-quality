@@ -14,12 +14,14 @@ class FirestoreServices {
   }
 
   signupUserToDB(
-      String uid, String user, String email, String krishibhavan) async {
+    String uid,
+    String user,
+    String email,
+  ) async {
     try {
       await _firestore.collection('users').doc(uid).set({
         "name": user,
         "email": email,
-        "krishibhavan": krishibhavan,
       });
       return "success";
     } catch (e) {
@@ -41,16 +43,6 @@ class FirestoreServices {
       return false;
     } catch (e) {
       return true;
-    }
-  }
-
-  Future<String> getKrishibhavan(String uid) async {
-    try {
-      var doc = await _firestore.collection('users').doc(uid).get();
-      return doc.data()!["krishibhavan"];
-    } catch (e) {
-      print(e);
-      return "ERROR";
     }
   }
 }
